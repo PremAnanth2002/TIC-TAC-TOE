@@ -1,0 +1,95 @@
+/* Updated styling with background */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000000; /* Background color for the entire page */
+}
+
+/* Game container */
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Arial', sans-serif;
+  margin-top: 50px;
+  background-color: #ffffff; /* Background color for the game container */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Game board */
+.game-board {
+  margin-right: 20px;
+}
+
+.board-row {
+  display: flex;
+}
+
+/* Squares */
+.square {
+  font-size: 36px;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  background-color: #fff;
+  border: 2px solid #07f727; /* Border color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #333; /* Default text color */
+  text-shadow: 0 0 10px #fff; /* Glow effect */
+}
+
+.square:hover {
+  background-color: #f0f0f0;
+}
+
+/* Assign different colors for X and O */
+.square.x {
+  color: #07f727; /* Color for X */
+}
+
+.square.o {
+  color: #2196f3; /* Color for O */
+}
+
+/* Status message */
+.status {
+  font-size: 24px;
+  margin-bottom: 20px;
+  animation: statusAnimation 1s ease-in-out infinite alternate;
+  color: #07f727; /* Text color */
+}
+
+@keyframes statusAnimation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Moves list */
+.game-info ol {
+  padding-left: 20px;
+}
+
+.game-info button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+  color: #07f727; /* Move button color */
+}
+
+.game-info button:hover {
+  color: #07f727; /* Hover color */
+}
